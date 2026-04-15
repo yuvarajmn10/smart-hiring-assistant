@@ -4,6 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes');
 const { protect, recruiterOnly, candidateOnly } = require('./middleware/auth');
+const jobRoutes = require('./routes/jobRoutes');
 
 dotenv.config();
 
@@ -13,6 +14,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
+app.use('/api/jobs', jobRoutes);
+
 // app.get('/api/test/protected', protect, (req, res) => {
 //   res.json({
 //     message: 'You accessed a protected route!',
