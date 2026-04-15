@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes');
+const { protect, recruiterOnly, candidateOnly } = require('./middleware/auth');
 
 dotenv.config();
 
@@ -12,6 +13,19 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
+// app.get('/api/test/protected', protect, (req, res) => {
+//   res.json({
+//     message: 'You accessed a protected route!',
+//     user: req.user
+//   });
+// });
+
+// app.get('/api/test/recruiter', protect, recruiterOnly, (req, res) => {
+//   res.json({
+//     message: 'You are a verified recruiter!',
+//     user: req.user
+//   });
+// });
 
 app.get('/health', (req, res) => {
   res.json({
