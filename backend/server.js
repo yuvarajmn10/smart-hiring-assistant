@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes');
 const { protect, recruiterOnly, candidateOnly } = require('./middleware/auth');
 const jobRoutes = require('./routes/jobRoutes');
+// const Application = require('./models/Application');
+
 
 dotenv.config();
 
