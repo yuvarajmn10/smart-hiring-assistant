@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const { protect, recruiterOnly, candidateOnly } = require('./middleware/auth');
 const jobRoutes = require('./routes/jobRoutes');
 // const Application = require('./models/Application');
+const applicationRoutes = require('./routes/applicationRoutes');
 
 
 dotenv.config();
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
 app.use('/api/jobs', jobRoutes);
+app.use('/api/applications', applicationRoutes);
 
 // app.get('/api/test/protected', protect, (req, res) => {
 //   res.json({
