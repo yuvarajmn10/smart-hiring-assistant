@@ -408,7 +408,7 @@ Every push to `main` redeploys both Render and Vercel automatically.
 - Every write checks ownership: recruiters can only read or change applications for **their own** jobs, and candidates can only see their own.
 - Roles are enforced on both the frontend routes and the backend controllers.
 - Uploads accept **PDF only, up to 5 MB**, held in memory and never written to disk.
-- CORS only allows the configured frontend.
+- CORS only allows the configured frontend (`FRONTEND_URL`) and `localhost:5173` for local development.
 
 ---
 
