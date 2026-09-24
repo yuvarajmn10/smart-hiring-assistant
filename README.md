@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-6366f1?style=for-the-badge)](https://smart-hiring-assistant-hireai.vercel.app)
 [![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=loom)](https://www.loom.com/share/901c3bb1208f4030ad485b42250a0b3e)
-[![GitHub Frontend](https://img.shields.io/badge/Frontend-Repository-24243e?style=for-the-badge&logo=github)](https://github.com/SrujanRNaik/smart-hiring-assistant/tree/main/frontend)
+[![GitHub Frontend](https://img.shields.io/badge/Frontend-Repository-24243e?style=for-the-badge&logo=github)](https://github.com/yuvarajmn10/smart-hiring-assistant/tree/main/frontend)
 
 HireAI is a full-stack hiring platform. It uses Google Gemini to score each
 resume against the job's requirements. Recruiters see applicants ranked by
@@ -178,7 +178,7 @@ A RapidAPI key (for live jobs) and a Gmail app password (for reset emails) are o
 ### 1. Clone
 
 ```bash
-git clone https://github.com/SrujanRNaik/smart-hiring-assistant.git
+git clone https://github.com/yuvarajmn10/smart-hiring-assistant.git
 cd smart-hiring-assistant
 ```
 
