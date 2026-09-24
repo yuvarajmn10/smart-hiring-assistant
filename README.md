@@ -1,8 +1,8 @@
 # HireAI — AI-Powered Hiring Assistant
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-6366f1?style=for-the-badge)](https://smart-hiring-assistant.vercel.app)
-[![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=loom)](https://www.loom.com/share/901c3bb1208f4030ad485b42250a0b3e)
-[![GitHub Frontend](https://img.shields.io/badge/Frontend-Repository-24243e?style=for-the-badge&logo=github)](https://github.com/yuvarajmn10/smart-hiring-assistant/tree/main/frontend)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-24243e?style=for-the-badge&logo=github)](https://github.com/yuvarajmn10/smart-hiring-assistant)
+[![Backend](https://img.shields.io/badge/API-Render-46e3b7?style=for-the-badge&logo=render&logoColor=black)](https://hireai-backend-eaks.onrender.com)
 
 HireAI is a full-stack hiring platform. It uses Google Gemini to score each
 resume against the job's requirements. Recruiters see applicants ranked by
@@ -14,9 +14,12 @@ and follow their application status from their dashboard.
 
 ## 🎬 Demo
 
-[![Demo Video](./backend/Screenshot.png)](https://www.loom.com/share/901c3bb1208f4030ad485b42250a0b3e)
+[![HireAI screenshot](./backend/Screenshot.png)](https://smart-hiring-assistant.vercel.app)
 
 **Live App:** https://smart-hiring-assistant.vercel.app
+**Backend API:** https://hireai-backend-eaks.onrender.com
+
+> The backend runs on Render's free tier and sleeps when idle. The first request after a pause can take about 50 seconds.
 
 | Role | Email | Password |
 |------|-------|----------|
@@ -64,14 +67,14 @@ and follow their application status from their dashboard.
 | File upload | multer (memory storage) + pdf-parse |
 | External jobs | JSearch API (RapidAPI) |
 | Email | Nodemailer (Gmail) |
-| Deploy | Vercel (frontend) · Railway (backend) |
+| Deploy | Vercel (frontend) · Render (backend) |
 
 ---
 
 ## 🏗 Architecture
 
 ```
-Browser (Vercel)           Backend (Railway)              Services
+Browser (Vercel)           Backend (Render)                Services
 ────────────────           ─────────────────              ────────
 React + Vite     ──────▶   Express REST API     ──────▶   MongoDB Atlas
 JWT in storage             JWT auth + role checks  ──▶    Google Gemini
@@ -256,6 +259,25 @@ backend controllers.
 
 ---
 
+## ☁️ Deployment
+
+| Part | Host | Setup |
+|------|------|-------|
+| Backend | Render | `render.yaml` Blueprint: root `backend`, `npm install`, `npm start`. Set the secrets from `.env` in the Render dashboard, and set `FRONTEND_URL` to the Vercel URL. |
+| Frontend | Vercel | Root directory `frontend`, Vite preset, with `VITE_API_URL=https://<render-url>/api`. |
+| Database | MongoDB Atlas | Allow access from `0.0.0.0/0`, because Render's IP addresses change. |
+
+Every push to `main` redeploys both sites.
+
+---
+
+## 👤 Author
+
+**Yuvaraj M N**
+GitHub: [@yuvarajmn10](https://github.com/yuvarajmn10)
+
+---
+
 ## 📄 License
 
-MIT — built by Srujan R Naik
+MIT © Yuvaraj M N

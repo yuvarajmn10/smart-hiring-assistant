@@ -9,7 +9,7 @@
     "seed": "node seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yuvaraj M N",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
