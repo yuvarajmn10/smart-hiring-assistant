@@ -1,0 +1,25 @@
+# Render Blueprint — backend API (New → Blueprint, pick this repo)
+services:
+  - type: web
+    name: hireai-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      # sync: false → Render asks for the value when the Blueprint is created
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: RAPIDAPI_KEY
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false

@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Environment variables (never upload this — contains secrets)
+.env
+.env.local
+.env.production
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output (for later when you add React frontend)
+dist/
+build/
+
+# IDE
+.vscode/

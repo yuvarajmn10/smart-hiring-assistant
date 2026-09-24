@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Secrets — set these in the Render / Vercel dashboards instead
+.env
+.env.*
+
+# Build output
+dist/
+build/
+
+# Logs and scratch output
+*.log
+backend/out.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
