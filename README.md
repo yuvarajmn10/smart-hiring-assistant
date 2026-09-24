@@ -1,6 +1,6 @@
 # HireAI — AI-Powered Hiring Assistant
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-6366f1?style=for-the-badge)](https://smart-hiring-assistant-hireai.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-6366f1?style=for-the-badge)](https://smart-hiring-assistant.vercel.app)
 [![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=loom)](https://www.loom.com/share/901c3bb1208f4030ad485b42250a0b3e)
 [![GitHub Frontend](https://img.shields.io/badge/Frontend-Repository-24243e?style=for-the-badge&logo=github)](https://github.com/yuvarajmn10/smart-hiring-assistant/tree/main/frontend)
 
@@ -16,7 +16,7 @@ and follow their application status from their dashboard.
 
 [![Demo Video](./backend/Screenshot.png)](https://www.loom.com/share/901c3bb1208f4030ad485b42250a0b3e)
 
-**Live App:** https://smart-hiring-assistant-hireai.vercel.app
+**Live App:** https://smart-hiring-assistant.vercel.app
 
 | Role | Email | Password |
 |------|-------|----------|
